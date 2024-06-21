@@ -90,11 +90,11 @@ JUnit for unit tests in our Java code, and Selenium for automating UI tests
 
 ### AddOfferActivity
 
-| Test ID | Purpose                 | Steps                                                        | Expected Result                                              | Actual Result | Pass/Fail |
-| ------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- | --------- |
-| Test08  | Enter job offer details | 1. Activity is created (onCreate called), 2. Enter job offer details, 3. Save offer | Job offer is saved in OffersModel, user can enter another offer, return to MainActivity, or compare offers |               |           |
-| Test09  | Cancel adding job offer | 1. Enter job offer details, 2. Cancel                        | No job offer is saved, user returns to MainActivity          |               |           |
-| Test10  | Compare job offers      | 1. Trigger comparison                                        | Comparison table shows adjusted values and results in CompareOffersActivity |               |           |
+| Test ID | Purpose                 | Steps                                                        | Expected Result                                              | Actual Result | Pass/Fail | Additional Info |
+| ------- | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- | --------- | --------------- |
+| Test08  | Enter job offer details | 1. Activity is created (onCreate called), 2. Enter job offer details, 3. Save offer | Job offer is saved in OffersModel, user can enter another offer, return to MainActivity, or compare offers |               |           |                 |
+| Test09  | Cancel adding job offer | 1. Enter job offer details, 2. Cancel                        | No job offer is saved, user returns to MainActivity          |               |           |                 |
+| Test10  | Compare job offers      | 1. Trigger comparison                                        | Comparison table shows adjusted values and results in CompareOffersActivity |               |           |                 |
 
 
 
@@ -109,11 +109,11 @@ JUnit for unit tests in our Java code, and Selenium for automating UI tests
 
 ### RankOffersActivity
 
-| Test Case ID | Purpose            | Steps                                                        | Expected Result                                              | Actual Result | Pass/Fail |
-| ------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- | --------- |
-| Test13       | Rank job offers    | 1. Activity is created (onCreate called), 2. Enter multiple job offers | Job offers are ranked correctly based on user settings and job details |               |           |
-| Test14       | Compare job offers | 1.Trigger comparison                                         | Comparison table shows adjusted values and results in CompareOffersActivity |               |           |
-| Test15       | Cancel rank offer  | 1. Enter multiple job offers,2.Cancel                        | No changes are saved, user returns to MainActivity           |               |           |
+| Test Case ID | Purpose            | Steps                                                        | Expected Result                                              | Actual Result | Pass/Fail | Additional Info |
+| ------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------- | --------- | --------------- |
+| Test13       | Rank job offers    | 1. Activity is created (onCreate called), 2. Enter multiple job offers | Job offers are ranked correctly based on user settings and job details |               |           |                 |
+| Test14       | Compare job offers | 1.Trigger comparison                                         | Comparison table shows adjusted values and results in CompareOffersActivity |               |           |                 |
+| Test15       | Cancel rank offer  | 1. Enter multiple job offers,2.Cancel                        | No changes are saved, user returns to MainActivity           |               |           |                 |
 
 ### CompareOffersActivity
 
