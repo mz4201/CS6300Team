@@ -5,6 +5,8 @@ With no prior design experience, I did my best to map out the system interaction
 
 ## Design 2 - pwang422
 
+With limited design experience, I did my best to contribute to it. While I aimed to include the necessary features and requirements, my design could benefit from more specificity and detail. Additionally, the UML diagrams are missing a lot of features, and the overall design has a significant flaw that needs to be addressed.
+
 
 ## Design 3 - ssinha96
 The design document that I made was for an application that would have been extensible and scalable.
