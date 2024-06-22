@@ -2,8 +2,9 @@
 
 ## Design 1 - mzhao341
 
-
 ## Design 2 - pwang422
+
+With limited design experience, I did my best to contribute to it. While I aimed to include the necessary features and requirements, my design could benefit from more specificity and detail.
 
 
 ## Design 3 - ssinha96
