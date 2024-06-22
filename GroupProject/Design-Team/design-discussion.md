@@ -2,11 +2,12 @@
 
 ## Design 1 - mzhao341
 With no prior design experience, I did my best to map out the system interactions. Although there were many uncertainties, I aimed to include all specified details, like save and cancel features. Compared to my teammates, my structure was less clear, especially in differentiating between Current Job and Job Offer, which wasn't necessary. However, at least the overall layout is clean and easy to read.
+![mzhao341 Original Design](../Design-Individual/mzhao341/design.png)
 
 ## Design 2 - pwang422
 
 With limited design experience, I did my best to contribute to it. While I aimed to include the necessary features and requirements, my design could benefit from more specificity and detail. Additionally, the UML diagrams are missing a lot of features, and the overall design has a significant flaw that needs to be addressed.
-
+![pwang422 Original Design](../Design-Individual/pwang422/design.png)
 
 ## Design 3 - ssinha96
 The design document that I made was for an application that would have been extensible and scalable.
@@ -15,6 +16,9 @@ However, for the purposes of the group project, which will be written in Android
 That said, I do think that my generalization of a job, rather than having separate ways of storing a current job and an offered job is elegant.
 
 The design document that I made was for an application that would have been extensible and scalable. However, for the purposes of the group project, which will be written in Android, I don't think my approach would work. That said, I do think that my generalization of a job, rather than having separate ways of storing a current job and an offered job is elegant.
+
+![ssinha96 Original Design](../Design-Individual/ssinha96/design_1.png)
+![ssinha96 Original Design](../Design-Individual/ssinha96/design_2.png)
 
 ## Design 4 - tsachse3
 
