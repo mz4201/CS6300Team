@@ -1,26 +1,42 @@
 # Project Plan
 
-*This is the template for your project plan. The parts in italics are concise explanations of what should go in the corresponding sections and should not appear in the final document.*
-
-**Author**: \<person or team name\>
+**Author**: Team032
 
 ## 1 Introduction
 
-*Here you introduce the product. Keep this  clean and simple, one or two sentences at most.*
-
+This project creates a single-user app that help compare job offers based on various factors and allow weighted adjustments on setting preferences.
 ## 2 Process Description
 
-*Project development process description as a set of activities; for each development process activity, provide the following:*
-
-- *Activity name (verb or verb phrase)*
-- *Activity description (concise paragraph)*
-- *Entrance criteria (inputs needed for the activity)*
-- *Exit criteria (outputs produced by the activity and how you know it has been completed satisfactorily)*
+### Plan
+- **Activity Description:** Define project goals/scope at a broad level;
+- **Entrance Criteria:** identify stakeholder(s), project proposal
+- **Exit Criteria:** project charter/plan, identified stakeholder(s)
+### Analyze
+- **Activity Description:** Identify technical requirements; have list of stakeholder(s)
+- **Entrance Criteria:** Project charter/plan
+- **Exit Criteria:** detailed project plan with deliverable dates; 
+### Design
+- **Activity Description:** design the solution, develop project schedule, communication plan and setup deliverables.
+- **Entrance Criteria:** project charter, technical requirements
+- **Exit Criteria:** design documents, design review, Use Case scenarios
+### Implement
+- **Activity Description:** developing the solution while meeting deliverable deadlines
+- **Entrance Criteria:** final design document
+- **Exit Criteria:** fully functional code that has been reviewed
+### Test
+- **Activity Description:** Testing the code for all scenarios, minimize/eliminate potential bugs.
+- **Entrance Criteria:** test plans, completed code
+- **Exit Criteria:** completed test code, without critical bugs
+### Maintain
+- **Activity Description:** maintaining the application by provide support after deployment. May fix discovered bugs, enhancements for the system to run smoothly.
+- **Entrance Criteria:** deployed application
+- **Exit Criteria:** smooth-running application.
 
 ## 3 Team
 
-*Describe the team and their roles (include at least 4 roles, there may be more roles than there are team members)*
-
-- *Team members' names*
-- *Roles, with a short description of each role*
-- *Table showing which team member(s) has which role(s)*
+| **Team Member** | **Role** | **Description** |
+|-----------------|----------|-----------------|
+| Tiger Sachse    | TBD      | TBD             |
+| Shashvat Sinha  | TBD      | TBD             |
+| Peixian Wang    | TBD      | TBD             |
+| Mei Zhao        | TBD      | TBD             |
