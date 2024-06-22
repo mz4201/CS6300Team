@@ -1,6 +1,6 @@
 # Design Document
 
-**Author**: Team032
+**Author**: Team 032
 
 ## 1 Design Considerations
 
@@ -14,8 +14,25 @@ This design assumes that:
 * the user has a reasonably modern Android phone that can install apps
 * the user has some familiarity with Android apps in general
 
-### 1.2 Constraints
 
+These are our assumptions:
+1. The eventual product that will be built is an Android app.
+2. The product will be entirely selfcontained in a single app on a single Android device. i.e. there will be no external back-end, database etc.
+3. The app will be written in Java.
+
+### 1.2 Constraints
+1. Since the system will be a standalone application on an Android device, there will be no external database for data persistence. Whatever will be saved is part of the App's data space.
+2. The App user interface should follow Android guidelines, specifically, it should be usable on a Pixel 6 device.
+
+### 1.3 System Environment
+1. The hardware that we are designing towards is an Android phone. 
+2. The application will be developed in Android Studio.
+3. The testing will be done on a simulated Pixel 6 device within Android studio.
+
+## 2 Architectural Design
+*The architecture provides the high-level design view of a system and provides a basis for more detailed design work. These subsections describe the top-level components of the system you are building and their relationships.*
+
+### 2.1 Component Diagram
 This design must:
 
 * not call backend services or use the network at all
@@ -46,9 +63,13 @@ This diagram shows how the different components relate:
 
 ![Component Diagram](Images/components.png)
 
+TBD once the design is more mature.
+
 ### 2.2 Deployment Diagram
 
 This app is installed directly by users and does not need to be deployed in any way.
+
+TBD once the design is more mature.
 
 ## 3 Low-Level Design
 
@@ -72,9 +93,17 @@ Collections.sort(offers, new JobRanker(user));
 
 This diagram shows how the classes map into the layered component architecture described earlier:
 
+TBD once the design is more mature.
+
+### 3.1 Class Diagram
+
 ![Layer Diagram](Images/layers.png)
 
 This diagram shows the shape of the classes within the UI component and how they interact in this design:
+
+TBD - copy over from design-description.md
+
+### 3.2 Other Diagrams
 
 ![Activities UML Diagram](Images/activities-uml-diagram.png)
 
@@ -83,6 +112,8 @@ This diagram shows the shape of the classes within the Bridge, Data, and Logic c
 ![Data UML Diagram](Images/data-uml-diagram.png)
 
 ## 4 User Interface Design
+
+TBD once the design is more mature.
 
 The following (rough) mockups show the layout of each activity in the app's UI. These mockups are meant more as a technical guide and don't represent the final look-and-feel of the app.
 
