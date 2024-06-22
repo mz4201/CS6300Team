@@ -1,7 +1,7 @@
 # Team 032 - CS6300 Summer 2024 - Design Discussion
 
 ## Design 1 - mzhao341
-
+With no prior design experience, I did my best to map out the system interactions. Although there were many uncertainties, I aimed to include all specified details, like save and cancel features. Compared to my teammates, my structure was less clear, especially in differentiating between Current Job and Job Offer, which wasn't necessary. However, at least the overall layout is clean and easy to read.
 
 ## Design 2 - pwang422
 
