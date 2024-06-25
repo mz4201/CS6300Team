@@ -3,14 +3,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
   <application
-      android:label="@string/app_name"
+      android:label="@string/appName"
       android:theme="@style/Theme.JobCompare"
       tools:targetApi="33">
-    <activity android:name=".MainActivity" android:exported="true">
+    <activity
+        android:name="edu.gatech.seclass.jobcompare6300.ui.MainActivity"
+        android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
+    </activity>
+    <activity
+        android:name="edu.gatech.seclass.jobcompare6300.ui.AddJobActivity">
+    </activity>
+    <activity
+        android:name="edu.gatech.seclass.jobcompare6300.ui.AddOfferActivity">
+    </activity>
+    <activity
+        android:name="edu.gatech.seclass.jobcompare6300.ui.EditSettingsActivity">
+    </activity>
+    <activity
+        android:name="edu.gatech.seclass.jobcompare6300.ui.RankOffersActivity">
+    </activity>
+    <activity
+        android:name="edu.gatech.seclass.jobcompare6300.ui.CompareOffersActivity">
     </activity>
   </application>
 </manifest>
