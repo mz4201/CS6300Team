@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="appName">JobCompare</string>
-  <string name="mainAddJobButtonText">Add Job</string>
+  <string name="mainAddJobButtonText">Add/Edit Job</string>
   <string name="mainAddOfferButtonText">Add Offer</string>
   <string name="mainEditSettingsButtonText">Edit Settings</string>
   <string name="mainRankOffersButtonText">Rank Offers</string>
