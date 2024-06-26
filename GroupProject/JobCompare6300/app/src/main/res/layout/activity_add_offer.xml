@@ -1,9 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    tools:context=".ui.AddOfferActivity">
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:autofillHints=" "
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:text="Job Detail"
+      android:gravity="center"
+      android:textAlignment="center"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:background="#6750A3"
+      android:textColor="@color/white"
+      />
+  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:stretchColumns="1"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp">
+
+    <!-- job title -->
+    <TableRow>
+      <TextView
+          android:text="Title"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/jobTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"/>
+    </TableRow>
+
+    <!-- Company -->
+    <TableRow>
+      <TextView
+          android:text="Company"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/company"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"/>
+    </TableRow>
+
+    <!-- Location -->
+    <TableRow>
+      <TextView
+          android:text="City"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/city"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"/>
+      <TextView
+          android:text="State"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/state"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"/>
+    </TableRow>
+
+    <!-- Cost of Living -->
+    <TableRow>
+      <TextView
+          android:text="Cost of Living"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/costOfLiving"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"
+          android:inputType="number"/>
+    </TableRow>
+
+    <!-- Yearly Salary -->
+    <TableRow>
+      <TextView
+          android:text="Yearly Salary"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/yearlySalary"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"
+          android:inputType="number"/>
+    </TableRow>
+
+    <!-- Yearly Bonus -->
+    <TableRow>
+      <TextView
+          android:text="Yearly Bonus"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/yearlyBonus"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:textSize="18sp"
+          android:inputType="number"/>
+    </TableRow>
+
+    <!-- Training and Development Fund -->
+    <TableRow>
+      <TextView
+          android:text="Training/Development Fund"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/trainingFund"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"
+          android:inputType="number"/>
+    </TableRow>
+
+    <!-- Leave Time -->
+    <TableRow>
+      <TextView
+          android:text="Leave Time"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/leaveTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"
+          android:inputType="number"/>
+    </TableRow>
+
+    <!-- Telework Days -->
+    <TableRow>
+      <TextView
+          android:text="Telework Days Per Week"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"/>
+      <EditText
+          android:id="@+id/teleworkDays"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textSize="18sp"
+          android:inputType="number"/>
+    </TableRow>
+  </TableLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:gravity="center">
   <Button
       android:id="@+id/addOfferAddOfferButton"
@@ -14,20 +211,17 @@
       android:minWidth="300dp"
       android:text="@string/addOfferAddOfferButtonText"
       android:textSize="24dp"/>
-  <Button
-      android:id="@+id/addOfferCompareOffersButton"
-      android:layout_height="wrap_content"
-      android:layout_width="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_margin="32dp"
-      android:minWidth="300dp"
-      android:text="@string/addOfferCompareOffersButtonText"
-      android:textSize="24dp"/>
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:gravity="center">
+
+    <Button
+        android:id="@+id/addOfferCompareOffersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="32dp"
+        android:minWidth="300dp"
+        android:text="@string/addOfferCompareOffersButtonText"
+        android:textSize="24dp" />
+
     <Button
         android:id="@+id/addOfferSaveButton"
         android:layout_height="wrap_content"
@@ -46,5 +240,6 @@
         android:minWidth="128dp"
         android:text="@string/addOfferCancelButtonText"
         android:textSize="24dp"/>
+    </LinearLayout>
   </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
