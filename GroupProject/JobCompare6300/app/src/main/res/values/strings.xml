@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">JobCompare</string>
+  <string name="appName">JobCompare</string>
+  <string name="mainAddJobButtonText">Add Job</string>
+  <string name="mainAddOfferButtonText">Add Offer</string>
+  <string name="mainEditSettingsButtonText">Edit Settings</string>
+  <string name="mainRankOffersButtonText">Rank Offers</string>
+  <string name="addJobSaveButtonText">Save</string>
+  <string name="addJobCancelButtonText">Cancel</string>
+  <string name="addOfferAddOfferButtonText">Save &amp; Add Another</string>
+  <string name="addOfferCompareOffersButtonText">Save &amp; Compare Offers</string>
+  <string name="addOfferSaveButtonText">Save</string>
+  <string name="addOfferCancelButtonText">Cancel</string>
+  <string name="editSettingsSaveButtonText">Save</string>
+  <string name="editSettingsCancelButtonText">Cancel</string>
+  <string name="rankOffersCompareOffersButtonText">Compare Offers</string>
+  <string name="rankOffersCancelButtonText">Cancel</string>
+  <string name="compareOffersRankOffersButtonText">Rank Offers</string>
+  <string name="compareOffersCancelButtonText">Cancel</string>
 </resources>
