@@ -2,8 +2,15 @@ package edu.gatech.seclass.jobcompare6300.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import java.lang.Math;
 
 public class WeightSettings implements Parcelable {
+
+    private int clamp(int a) {
+        int MAX = 9;
+        int MIN = 0;
+        return (a > MAX) ? MAX : (Math.max(a, MIN));
+    }
     private int salary = 5;
     private int bonus = 5;
     private int training = 5;
@@ -37,23 +44,23 @@ public class WeightSettings implements Parcelable {
 
     // Setters
     public void setSalary(int salary) {
-        this.salary = salary;
+        this.salary = clamp(salary);
     }
 
     public void setBonus(int bonus) {
-        this.bonus = bonus;
+        this.bonus = clamp(bonus);
     }
 
     public void setTraining(int training) {
-        this.training = training;
+        this.training = clamp(training);
     }
 
     public void setLeave(int leave) {
-        this.leave = leave;
+        this.leave = clamp(leave);
     }
 
     public void setTelework(int telework) {
-        this.telework = telework;
+        this.telework = clamp(telework);
     }
 
     // Parcelable implementation
