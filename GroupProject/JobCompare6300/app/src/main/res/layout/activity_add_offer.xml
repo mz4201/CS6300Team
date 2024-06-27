@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AddOfferActivity">
+    tools:context=".ui.AddJobActivity">
+
+
   <LinearLayout
       android:id="@+id/linearLayout"
       android:layout_width="0dp"
@@ -16,230 +18,252 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
-  <TextView
-      android:id="@+id/textView"
-      android:layout_width="match_parent"
-      android:layout_height="60dp"
-      android:text="Job Detail"
-      android:gravity="center"
-      android:textAlignment="center"
-      android:textSize="25sp"
-      android:textStyle="bold"
-      android:background="#6750A3"
-      android:textColor="@color/white"
-      />
-  <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:stretchColumns="1"
-      android:paddingStart="16dp"
-      android:paddingEnd="16dp">
-
-    <!-- job title -->
-    <TableRow>
-      <TextView
-          android:text="Title"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/jobTitle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"/>
-    </TableRow>
-
-    <!-- Company -->
-    <TableRow>
-      <TextView
-          android:text="Company"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/company"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"/>
-    </TableRow>
-
-    <!-- Location -->
-    <TableRow>
-      <TextView
-          android:text="City"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/city"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"/>
-      <TextView
-          android:text="State"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/state"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"/>
-    </TableRow>
-
-    <!-- Cost of Living -->
-    <TableRow>
-      <TextView
-          android:text="Cost of Living"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/costOfLiving"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"
-          android:inputType="number"/>
-    </TableRow>
-
-    <!-- Yearly Salary -->
-    <TableRow>
-      <TextView
-          android:text="Yearly Salary"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/yearlySalary"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"
-          android:inputType="number"/>
-    </TableRow>
-
-    <!-- Yearly Bonus -->
-    <TableRow>
-      <TextView
-          android:text="Yearly Bonus"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/yearlyBonus"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"
-          android:inputType="number"/>
-    </TableRow>
-
-    <!-- Training and Development Fund -->
-    <TableRow>
-      <TextView
-          android:text="Training/Development Fund"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/trainingFund"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"
-          android:inputType="number"/>
-    </TableRow>
-
-    <!-- Leave Time -->
-    <TableRow>
-      <TextView
-          android:text="Leave Time"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/leaveTime"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"
-          android:inputType="number"/>
-    </TableRow>
-
-    <!-- Telework Days -->
-    <TableRow>
-      <TextView
-          android:text="Telework Days Per Week"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/teleworkDays"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:textSize="18sp"
-          android:inputType="number"/>
-    </TableRow>
-  </TableLayout>
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center">
-  <Button
-      android:id="@+id/addOfferAddOfferButton"
-      android:layout_height="wrap_content"
-      android:layout_width="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_margin="32dp"
-      android:minWidth="300dp"
-      android:text="@string/addOfferAddOfferButtonText"
-      android:textSize="24dp"/>
-
-    <Button
-        android:id="@+id/addOfferCompareOffersButton"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/job_offer_detail"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#6750A3"
+        android:textColor="@color/white"
+        />
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="32dp"
-        android:minWidth="300dp"
-        android:text="@string/addOfferCompareOffersButtonText"
-        android:textSize="24dp" />
+        android:stretchColumns="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
-    <Button
-        android:id="@+id/addOfferSaveButton"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="32dp"
-        android:minWidth="128dp"
-        android:text="@string/addOfferSaveButtonText"
-        android:textSize="24dp"/>
-    <Button
-        android:id="@+id/addOfferCancelButton"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="32dp"
-        android:minWidth="128dp"
-        android:text="@string/addOfferCancelButtonText"
-        android:textSize="24dp"/>
+      <!-- job title -->
+      <TableRow>
+        <TextView
+            android:text="@string/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/jobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Company -->
+      <TableRow>
+        <TextView
+            android:text="@string/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Location -->
+      <TableRow>
+        <TextView
+            android:text="@string/city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="LabelFor,TouchTargetSizeCheck" />
+        <TextView
+            android:text="@string/state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Cost of Living -->
+      <TableRow>
+        <TextView
+            android:text="@string/cost_of_living"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/costOfLiving"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Yearly Salary -->
+      <TableRow>
+        <TextView
+            android:text="@string/yearly_salary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/yearlySalary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Yearly Bonus -->
+      <TableRow>
+        <TextView
+            android:text="@string/yearly_bonus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/yearlyBonus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Training and Development Fund -->
+      <TableRow>
+        <TextView
+            android:text="@string/training_development_fund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/trainingFund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Leave Time -->
+      <TableRow>
+        <TextView
+            android:text="@string/leave_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/leaveTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+
+      <!-- Telework Days -->
+      <TableRow>
+        <TextView
+            android:text="@string/telework_days_per_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/teleworkDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
+      </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+      <Button
+          android:id="@+id/addOfferAddOfferButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="300dp"
+          android:text="@string/addOfferAddOfferButtonText"
+          android:textSize="18sp" />
+
+      <Button
+          android:id="@+id/addOfferCompareOffersButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="300dp"
+          android:text="@string/addOfferCompareOffersButtonText"
+          android:textSize="18sp" />
+
+      <Button
+          android:id="@+id/addOfferSaveButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="300dp"
+          android:text="@string/addJobSaveButtonText"
+          android:textSize="18sp"
+          tools:ignore="ButtonStyle" />
+
+      <Button
+          android:id="@+id/addOfferCancelButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="300dp"
+          android:text="@string/addJobCancelButtonText"
+          android:textSize="18sp"
+          tools:ignore="ButtonStyle" />
     </LinearLayout>
+
   </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
