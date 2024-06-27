@@ -4,18 +4,14 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class WeightSettings implements Parcelable {
-    private final int salary;
-    private final int bonus;
-    private final int training;
-    private final int leave;
-    private final int telework;
+    private int salary = 5;
+    private int bonus = 5;
+    private int training = 5;
+    private int leave = 5;
+    private int telework = 5;
 
-    public WeightSettings(int salary, int bonus, int training, int leave, int telework) {
-        this.salary = salary;
-        this.bonus = bonus;
-        this.training = training;
-        this.leave = leave;
-        this.telework = telework;
+    public WeightSettings() {
+        // Default values are already set in field declarations
     }
 
     // Getters
@@ -37,6 +33,27 @@ public class WeightSettings implements Parcelable {
 
     public int getTelework() {
         return telework;
+    }
+
+    // Setters
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
+
+    public void setTraining(int training) {
+        this.training = training;
+    }
+
+    public void setLeave(int leave) {
+        this.leave = leave;
+    }
+
+    public void setTelework(int telework) {
+        this.telework = telework;
     }
 
     // Parcelable implementation
