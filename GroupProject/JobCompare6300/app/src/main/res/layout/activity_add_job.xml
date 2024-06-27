@@ -22,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Job Detail"
+        android:text="@string/job_detail"
         android:gravity="center"
         android:textAlignment="center"
         android:textSize="25sp"
@@ -30,7 +30,7 @@
         android:background="#6750A3"
         android:textColor="@color/white"
         />
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:stretchColumns="1"
@@ -40,163 +40,187 @@
       <!-- job title -->
       <TableRow>
         <TextView
-            android:text="Title"
+            android:text="@string/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/jobTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textSize="18sp"/>
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Company -->
       <TableRow>
         <TextView
-            android:text="Company"
+            android:text="@string/company"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/company"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textSize="18sp"/>
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Location -->
       <TableRow>
         <TextView
-            android:text="City"
+            android:text="@string/city"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/city"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:textSize="18sp"/>
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="LabelFor,TouchTargetSizeCheck" />
       <TextView
-          android:text="State"
+          android:text="@string/state"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:textSize="18sp"/>
-      <EditText
-          android:id="@+id/state"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="2"
-          android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="text"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck" />
     </TableRow>
 
       <!-- Cost of Living -->
       <TableRow>
         <TextView
-            android:text="Cost of Living"
+            android:text="@string/cost_of_living"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/costOfLiving"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:inputType="number"
             android:textSize="18sp"
-            android:inputType="number"/>
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Yearly Salary -->
       <TableRow>
         <TextView
-            android:text="Yearly Salary"
+            android:text="@string/yearly_salary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/yearlySalary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:inputType="number"
             android:textSize="18sp"
-            android:inputType="number"/>
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Yearly Bonus -->
       <TableRow>
         <TextView
-            android:text="Yearly Bonus"
+            android:text="@string/yearly_bonus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/yearlyBonus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:inputType="number"
             android:textSize="18sp"
-            android:inputType="number"/>
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Training and Development Fund -->
       <TableRow>
         <TextView
-            android:text="Training/Development Fund"
+            android:text="@string/training_development_fund"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/trainingFund"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="number"
             android:textSize="18sp"
-            android:inputType="number"/>
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Leave Time -->
       <TableRow>
         <TextView
-            android:text="Leave Time"
+            android:text="@string/leave_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/leaveTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="number"
             android:textSize="18sp"
-            android:inputType="number"/>
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
 
       <!-- Telework Days -->
       <TableRow>
         <TextView
-            android:text="Telework Days Per Week"
+            android:text="@string/telework_days_per_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="18sp"/>
+
         <EditText
             android:id="@+id/teleworkDays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:inputType="number"
             android:textSize="18sp"
-            android:inputType="number"/>
+            tools:ignore="TouchTargetSizeCheck" />
       </TableRow>
     </TableLayout>
 
@@ -214,7 +238,8 @@
           android:layout_margin="32dp"
           android:minWidth="128dp"
           android:text="@string/addJobSaveButtonText"
-          android:textSize="24dp" />
+          android:textSize="24sp"
+          tools:ignore="ButtonStyle" />
 
       <Button
           android:id="@+id/addJobCancelButton"
@@ -224,7 +249,8 @@
           android:layout_margin="32dp"
           android:minWidth="128dp"
           android:text="@string/addJobCancelButtonText"
-          android:textSize="24dp" />
+          android:textSize="24sp"
+          tools:ignore="ButtonStyle" />
     </LinearLayout>
   </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
