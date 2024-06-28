@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import edu.gatech.seclass.jobcompare6300.R;
+import edu.gatech.seclass.jobcompare6300.bridge.UserModel;
 
 public class MainActivity extends AppCompatActivity {
+  private UserModel userModel;
 
   @Override
   protected void onCreate(Bundle bundle) {
