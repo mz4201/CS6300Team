@@ -26,3 +26,5 @@
 hs_err_pid*
 local.properties
 submission.txt.DS_Store
+.idea
+submission.txt
