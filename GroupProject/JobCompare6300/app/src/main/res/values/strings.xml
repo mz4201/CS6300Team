@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="appName">JobCompare</string>
-  <string name="mainAddJobButtonText">Add/Edit Job</string>
+  <string name="mainAddJobButtonText">Add / Edit Job</string>
   <string name="mainAddOfferButtonText">Add Offer</string>
-  <string name="mainEditSettingsButtonText">Edit Settings</string>
-  <string name="mainRankOffersButtonText">Rank Offers</string>
+  <string name="mainEditSettingsButtonText">Comparison Setting</string>
+  <string name="mainRankOffersButtonText">Compare Offers</string>
   <string name="addJobSaveButtonText">Save</string>
   <string name="addJobCancelButtonText">Cancel</string>
   <string name="addOfferAddOfferButtonText">Save &amp; Add Another</string>
@@ -13,9 +13,9 @@
   <string name="addOfferCancelButtonText">Cancel</string>
   <string name="editSettingsSaveButtonText">Save</string>
   <string name="editSettingsCancelButtonText">Cancel</string>
-  <string name="rankOffersCompareOffersButtonText">Compare Offers</string>
+  <string name="rankOffersCompareOffersButtonText">Compare </string>
   <string name="rankOffersCancelButtonText">Cancel</string>
-  <string name="compareOffersRankOffersButtonText">Rank Offers</string>
+  <string name="compareOffersRankOffersButtonText">Make Another Comparison</string>
   <string name="compareOffersCancelButtonText">Cancel</string>
   <string name="job_detail">Job Detail</string>
   <string name="title">Title</string>
@@ -30,4 +30,18 @@
   <string name="telework_days_per_week">Telework Days Per Week</string>
   <string name="save">Save</string>
   <string name="job_offer_detail">Job Offer Detail</string>
+  <string name="comparison_setting">Comparison Setting</string>
+  <string name="adjust_weight_instruction">Adjust the weight between \n0 (no interest/don\'t care) and 9 (highest interest)</string>
+  <string name="comparison_yearly_salary">Yearly Salary:</string>
+  <string name="comparison_base_setting">0</string>
+  <string name="comparison_yearly_bonus">Yearly Bonus:</string>
+  <string name="comparison_training_and_development_fund">Training and Development Fund:</string>
+  <string name="comparison_leave_time">Leave Time:</string>
+  <string name="comparison_telework_days_per_week">Telework Days per Week:</string>
+  <string name="job_offers">Job Offers</string>
+  <string name="current_job">Current Job</string>
+  <string name="none">None</string>
+  <string name="ranked_from_best_to_worst">Ranked from best to worst</string>
+  <string name="location">Location</string>
+  <string name="comparison_result">Comparison Result</string>
 </resources>

@@ -27,11 +27,19 @@ public class AddJobActivity extends AppCompatActivity {
   private Button addJobSaveButton;
   private Button addJobCancelButton;
 
+
   private UserModel userModel;
+
   @Override
-  protected void onCreate(Bundle bundle) {
-    super.onCreate(bundle);
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_add_job);
+    initializeViews();
+    setupListeners();
+  }
+
+  //setup references
+  private void initializeViews() {
 
     userModel = new ViewModelProvider(this).get(UserModel.class);
 
@@ -45,11 +53,14 @@ public class AddJobActivity extends AppCompatActivity {
     trainingFund = findViewById(R.id.trainingFund);
     leaveTime = findViewById(R.id.leaveTime);
     teleworkDays = findViewById(R.id.teleworkDays);
-    var saveButton = findViewById(R.id.addJobSaveButton);
-    saveButton.setOnClickListener(view -> save());
+    addJobSaveButton = findViewById(R.id.addJobSaveButton);
+    addJobCancelButton = findViewById(R.id.addJobCancelButton);
+  }
 
-    var cancelButton = findViewById(R.id.addJobCancelButton);
-    cancelButton.setOnClickListener(view -> cancel());
+  //buttons action
+  private void setupListeners() {
+    addJobSaveButton.setOnClickListener(view -> save());
+    addJobCancelButton.setOnClickListener(view -> cancel());
   }
 
   private void save() {
