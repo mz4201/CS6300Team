@@ -7,27 +7,60 @@ import androidx.appcompat.app.AppCompatActivity;
 import edu.gatech.seclass.jobcompare6300.R;
 
 public class EditSettingsActivity extends AppCompatActivity {
-  private SeekBar seekBarYearlySalary;
-  private TextView labelYearlySalary;
+  private SeekBar seekBarYearlySalary, seekBarYearlyBonus, seekBarTraining, seekBarLeaveTime, seekBarTelework;
+  private TextView yearlySalaryValue, yearlyBonusValue, trainingValue, leaveTimeValue, teleworkValue;
 
   @Override
-  protected void onCreate(Bundle bundle) {
-    super.onCreate(bundle);
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_edit_settings);
 
-    seekBarYearlySalary = findViewById(R.id.seekBarYearlySalary);
-    labelYearlySalary = findViewById(R.id.labelYearlySalary);
+    // Initialize SeekBars and TextViews
+    seekBarYearlySalary = findViewById(R.id.yearlySalarySeekBar);
+    seekBarYearlyBonus = findViewById(R.id.yearlyBonusSeekBar);
+    seekBarTraining = findViewById(R.id.trainingSeekBar);
+    seekBarLeaveTime = findViewById(R.id.leaveTimeSeekBar);
+    seekBarTelework = findViewById(R.id.teleworkSeekBar);
 
-    setupSeekBarListener(seekBarYearlySalary, labelYearlySalary);
+    yearlySalaryValue = findViewById(R.id.yearlySalaryValue);
+    yearlyBonusValue = findViewById(R.id.yearlyBonusValue);
+    trainingValue = findViewById(R.id.trainingValue);
+    leaveTimeValue = findViewById(R.id.leaveTimeValue);
+    teleworkValue = findViewById(R.id.teleworkValue);
 
-    // Uncommented save and cancel button setup
-        /*
+    // Setup SeekBars with their respective TextViews
+    setupSeekBarListener(seekBarYearlySalary, yearlySalaryValue);
+    setupSeekBarListener(seekBarYearlyBonus, yearlyBonusValue);
+    setupSeekBarListener(seekBarTraining, trainingValue);
+    setupSeekBarListener(seekBarLeaveTime, leaveTimeValue);
+    setupSeekBarListener(seekBarTelework, teleworkValue);
+  }
+
+  private void setupSeekBarListener(SeekBar seekBar, TextView valueTextView) {
+    seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+      @Override
+      public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        valueTextView.setText(String.valueOf(progress));
+      }
+
+      @Override
+      public void onStartTrackingTouch(SeekBar seekBar) {
+        // Optionally handle event when user starts to interact with the SeekBar
+      }
+
+      @Override
+      public void onStopTrackingTouch(SeekBar seekBar) {
+        // Optionally handle event when user stops interacting with the SeekBar
+      }
+    });
+
+
         var saveButton = findViewById(R.id.editSettingsSaveButton);
         saveButton.setOnClickListener(view -> save());
 
         var cancelButton = findViewById(R.id.editSettingsCancelButton);
         cancelButton.setOnClickListener(view -> cancel());
-        */
+
   }
 
   private void save() {
@@ -38,22 +71,7 @@ public class EditSettingsActivity extends AppCompatActivity {
     finish();
   }
 
-  private void setupSeekBarListener(SeekBar seekBar, TextView label) {
-    seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-      @Override
-      public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        label.setText(String.valueOf(progress));
-      }
 
-      @Override
-      public void onStartTrackingTouch(SeekBar seekBar) {
-        // Not needed for implementation
-      }
 
-      @Override
-      public void onStopTrackingTouch(SeekBar seekBar) {
-        // Not needed for implementation
-      }
-    });
-  }
+
 }

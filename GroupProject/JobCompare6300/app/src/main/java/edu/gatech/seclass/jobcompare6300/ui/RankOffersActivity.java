@@ -17,6 +17,9 @@ public class RankOffersActivity extends AppCompatActivity {
 
     var cancelButton = findViewById(R.id.rankOffersCancelButton);
     cancelButton.setOnClickListener(view -> cancel());
+
+
+
   }
 
   private void compareOffers() {
@@ -27,4 +30,7 @@ public class RankOffersActivity extends AppCompatActivity {
   private void cancel() {
     finish();
   }
+
+
+
 }
