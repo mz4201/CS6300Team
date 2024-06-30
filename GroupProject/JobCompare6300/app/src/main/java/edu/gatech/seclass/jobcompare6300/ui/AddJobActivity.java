@@ -5,7 +5,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+
 import edu.gatech.seclass.jobcompare6300.R;
+import edu.gatech.seclass.jobcompare6300.bridge.UserModel;
+import edu.gatech.seclass.jobcompare6300.data.Job;
+import edu.gatech.seclass.jobcompare6300.data.User;
+import edu.gatech.seclass.jobcompare6300.data.WeightSettings;
 
 public class AddJobActivity extends AppCompatActivity {
   private EditText jobTitle;
@@ -21,6 +27,9 @@ public class AddJobActivity extends AppCompatActivity {
   private Button addJobSaveButton;
   private Button addJobCancelButton;
 
+
+  private UserModel userModel;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -31,6 +40,9 @@ public class AddJobActivity extends AppCompatActivity {
 
   //setup references
   private void initializeViews() {
+
+    userModel = new ViewModelProvider(this).get(UserModel.class);
+
     jobTitle = findViewById(R.id.jobTitle);
     company = findViewById(R.id.company);
     city = findViewById(R.id.city);
@@ -52,6 +64,20 @@ public class AddJobActivity extends AppCompatActivity {
   }
 
   private void save() {
+    Job job = new Job(
+            jobTitle.getText().toString(),
+            company.getText().toString(),
+            city.getText().toString(),
+            state.getText().toString(),
+            Integer.parseInt(costOfLiving.getText().toString()),
+            Integer.parseInt(yearlySalary.getText().toString()),
+            Integer.parseInt(yearlyBonus.getText().toString()),
+            Integer.parseInt(trainingFund.getText().toString()),
+            Integer.parseInt(leaveTime.getText().toString()),
+            Integer.parseInt(teleworkDays.getText().toString())
+    );
+    User user = new User(1, job, new WeightSettings());
+    userModel.setUser(user);
     finish();
   }
 
