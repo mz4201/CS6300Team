@@ -3,7 +3,9 @@ package edu.gatech.seclass.jobcompare6300.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Job implements Parcelable {
+import java.io.Serializable;
+
+public class Job implements Parcelable, Serializable {
     private final String title;
     private final String company;
     private final String city;

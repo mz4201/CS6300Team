@@ -5,6 +5,7 @@
   <application
       android:label="@string/appName"
       android:theme="@style/Theme.JobCompare"
+      android:name="edu.gatech.seclass.jobcompare6300.ui.JobCompareApplication"
       tools:targetApi="33">
     <activity
         android:name="edu.gatech.seclass.jobcompare6300.ui.MainActivity"

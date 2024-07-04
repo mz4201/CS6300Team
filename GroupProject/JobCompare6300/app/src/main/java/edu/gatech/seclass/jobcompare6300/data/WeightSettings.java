@@ -4,7 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import java.lang.Math;
 
-public class WeightSettings implements Parcelable {
+import java.io.Serializable;
+
+public class WeightSettings implements Parcelable, Serializable {
 
     private int clamp(int a) {
         int MAX = 9;

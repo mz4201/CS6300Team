@@ -2,6 +2,7 @@ package edu.gatech.seclass.jobcompare6300.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -10,10 +11,12 @@ import androidx.lifecycle.ViewModelProvider;
 import edu.gatech.seclass.jobcompare6300.data.Job;
 
 import edu.gatech.seclass.jobcompare6300.R;
+import edu.gatech.seclass.jobcompare6300.bridge.UserModel;
 import edu.gatech.seclass.jobcompare6300.bridge.OffersModel;
 
 public class AddOfferActivity extends AppCompatActivity {
   private EditText jobTitle, company, city, state, costOfLiving, yearlySalary, yearlyBonus, trainingFund, leaveTime, teleworkDays;
+  private UserModel userModel;
   private OffersModel offersModel;
 
   @Override
@@ -21,7 +24,9 @@ public class AddOfferActivity extends AppCompatActivity {
     super.onCreate(bundle);
     setContentView(R.layout.activity_add_offer);
 
-    offersModel = new ViewModelProvider(this).get(OffersModel.class);
+    var app = (JobCompareApplication) getApplication().getApplicationContext();
+    userModel = app.getUserModel();
+    offersModel = app.getOffersModel();
 
     jobTitle = findViewById(R.id.jobTitle);
     company = findViewById(R.id.company);
@@ -48,35 +53,48 @@ public class AddOfferActivity extends AppCompatActivity {
   }
 
   private void addOffer() {
+    var offer = parseOffer();
+    offersModel.addOffer(offer);
     var intent = new Intent(this, AddOfferActivity.class);
     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     startActivity(intent);
   }
 
   private void compareOffers() {
-    startActivity(new Intent(this, CompareOffersActivity.class));
+    var intent = new Intent(this, CompareOffersActivity.class);
+
+    var left = userModel.getUser().getJob();
+    intent.putExtra("left", (Parcelable) left);
+
+    var right = parseOffer();
+    offersModel.addOffer(right);
+    intent.putExtra("right", (Parcelable) right);
+
+    startActivity(intent);
     finish();
   }
 
   private void save() {
-    Job job = new Job(
-            jobTitle.getText().toString(),
-            company.getText().toString(),
-            city.getText().toString(),
-            state.getText().toString(),
-            Integer.parseInt(costOfLiving.getText().toString()),
-            Integer.parseInt(yearlySalary.getText().toString()),
-            Integer.parseInt(yearlyBonus.getText().toString()),
-            Integer.parseInt(trainingFund.getText().toString()),
-            Integer.parseInt(leaveTime.getText().toString()),
-            Integer.parseInt(teleworkDays.getText().toString())
-    );
-
-    offersModel.addOffer(job);
+    offersModel.addOffer(parseOffer());
     finish();
   }
 
   private void cancel() {
     finish();
+  }
+
+  private Job parseOffer() {
+    return new Job(
+        jobTitle.getText().toString(),
+        company.getText().toString(),
+        city.getText().toString(),
+        state.getText().toString(),
+        Integer.parseInt(costOfLiving.getText().toString()),
+        Integer.parseInt(yearlySalary.getText().toString()),
+        Integer.parseInt(yearlyBonus.getText().toString()),
+        Integer.parseInt(trainingFund.getText().toString()),
+        Integer.parseInt(leaveTime.getText().toString()),
+        Integer.parseInt(teleworkDays.getText().toString())
+    );
   }
 }
