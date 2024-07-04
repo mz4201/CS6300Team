@@ -44,6 +44,11 @@ public class AddOfferActivity extends AppCompatActivity {
 
     var compareOffersButton = findViewById(R.id.addOfferCompareOffersButton);
     compareOffersButton.setOnClickListener(view -> compareOffers());
+    var job = userModel.getUser().getJob();
+    var offers = offersModel.getOffers();
+    if (job != null && offers.size() >= 1) {
+      compareOffersButton.setEnabled(true);
+    }
 
     var saveButton = findViewById(R.id.addOfferSaveButton);
     saveButton.setOnClickListener(view -> save());

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.util.Log;
 import androidx.lifecycle.AndroidViewModel;
 import edu.gatech.seclass.jobcompare6300.data.User;
+import edu.gatech.seclass.jobcompare6300.data.WeightSettings;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -30,7 +31,7 @@ public class UserModel extends AndroidViewModel {
       this.user = (User) stream.readObject();
     } catch (Exception exception) {
       Log.w("JobCompare", "Could not read stored user, loading default");
-      this.user = new User(1, null, null);
+      this.user = new User(1, null, new WeightSettings());
     }
 
     return this.user;
