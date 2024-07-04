@@ -41,7 +41,8 @@ public class AddJobActivity extends AppCompatActivity {
   //setup references
   private void initializeViews() {
 
-    userModel = new ViewModelProvider(this).get(UserModel.class);
+    var app = (JobCompareApplication) getApplication().getApplicationContext();
+    userModel = app.getUserModel();
 
     jobTitle = findViewById(R.id.jobTitle);
     company = findViewById(R.id.company);
@@ -55,6 +56,20 @@ public class AddJobActivity extends AppCompatActivity {
     teleworkDays = findViewById(R.id.teleworkDays);
     addJobSaveButton = findViewById(R.id.addJobSaveButton);
     addJobCancelButton = findViewById(R.id.addJobCancelButton);
+
+    var job = userModel.getUser().getJob();
+    if (job != null) {
+      jobTitle.setText(job.getTitle());
+      company.setText(job.getCompany());
+      city.setText(job.getCity());
+      state.setText(job.getState());
+      costOfLiving.setText(String.valueOf(job.getCol()));
+      yearlySalary.setText(String.valueOf(job.getSalary()));
+      yearlyBonus.setText(String.valueOf(job.getBonus()));
+      trainingFund.setText(String.valueOf(job.getTraining()));
+      leaveTime.setText(String.valueOf(job.getLeave()));
+      teleworkDays.setText(String.valueOf(job.getTelework()));
+    }
   }
 
   //buttons action
@@ -76,8 +91,10 @@ public class AddJobActivity extends AppCompatActivity {
             Integer.parseInt(leaveTime.getText().toString()),
             Integer.parseInt(teleworkDays.getText().toString())
     );
-    User user = new User(1, job, new WeightSettings());
-    userModel.setUser(user);
+
+    var oldUser = userModel.getUser();
+    var newUser = new User(oldUser.getId(), job, oldUser.getSettings());
+    userModel.setUser(newUser);
     finish();
   }
 

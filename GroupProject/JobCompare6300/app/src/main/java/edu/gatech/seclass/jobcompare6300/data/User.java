@@ -6,7 +6,9 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-public class User implements Parcelable {
+import java.io.Serializable;
+
+public class User implements Parcelable, Serializable {
     private final int id;
     private final Job job;
     private final WeightSettings settings;

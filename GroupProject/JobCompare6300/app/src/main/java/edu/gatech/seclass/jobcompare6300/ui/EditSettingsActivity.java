@@ -5,10 +5,15 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import edu.gatech.seclass.jobcompare6300.R;
+import edu.gatech.seclass.jobcompare6300.bridge.UserModel;
+import edu.gatech.seclass.jobcompare6300.data.User;
+import edu.gatech.seclass.jobcompare6300.data.WeightSettings;
 
 public class EditSettingsActivity extends AppCompatActivity {
   private SeekBar seekBarYearlySalary, seekBarYearlyBonus, seekBarTraining, seekBarLeaveTime, seekBarTelework;
   private TextView yearlySalaryValue, yearlyBonusValue, trainingValue, leaveTimeValue, teleworkValue;
+
+  private UserModel userModel;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,23 @@ public class EditSettingsActivity extends AppCompatActivity {
     trainingValue = findViewById(R.id.trainingValue);
     leaveTimeValue = findViewById(R.id.leaveTimeValue);
     teleworkValue = findViewById(R.id.teleworkValue);
+
+    var app = (JobCompareApplication) getApplication().getApplicationContext();
+    userModel = app.getUserModel();
+    var settings = userModel.getUser().getSettings();
+    if (settings != null) {
+      seekBarYearlySalary.setProgress(settings.getSalary());
+      seekBarYearlyBonus.setProgress(settings.getBonus());
+      seekBarTraining.setProgress(settings.getTraining());
+      seekBarLeaveTime.setProgress(settings.getLeave());
+      seekBarTelework.setProgress(settings.getTelework());
+
+      yearlySalaryValue.setText(String.valueOf(settings.getSalary()));
+      yearlyBonusValue.setText(String.valueOf(settings.getBonus()));
+      trainingValue.setText(String.valueOf(settings.getTraining()));
+      leaveTimeValue.setText(String.valueOf(settings.getLeave()));
+      teleworkValue.setText(String.valueOf(settings.getTelework()));
+    }
 
     // Setup SeekBars with their respective TextViews
     setupSeekBarListener(seekBarYearlySalary, yearlySalaryValue);
@@ -64,6 +86,16 @@ public class EditSettingsActivity extends AppCompatActivity {
   }
 
   private void save() {
+    var settings = new WeightSettings();
+    settings.setSalary(seekBarYearlySalary.getProgress());
+    settings.setBonus(seekBarYearlyBonus.getProgress());
+    settings.setTraining(seekBarTraining.getProgress());
+    settings.setLeave(seekBarLeaveTime.getProgress());
+    settings.setTelework(seekBarTelework.getProgress());
+
+    var oldUser = userModel.getUser();
+    var newUser = new User(oldUser.getId(), oldUser.getJob(), settings);
+    userModel.setUser(newUser);
     finish();
   }
 
