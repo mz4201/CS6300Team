@@ -7,7 +7,6 @@ import edu.gatech.seclass.jobcompare6300.R;
 import edu.gatech.seclass.jobcompare6300.bridge.UserModel;
 
 public class MainActivity extends AppCompatActivity {
-  private UserModel userModel;
 
   @Override
   protected void onCreate(Bundle bundle) {
@@ -25,6 +24,18 @@ public class MainActivity extends AppCompatActivity {
 
     var rankOffersButton = findViewById(R.id.mainRankOffersButton);
     rankOffersButton.setOnClickListener(view -> rankOffers());
+  }
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+    var app = (JobCompareApplication) getApplication().getApplicationContext();
+    var job = app.getUserModel().getUser().getJob();
+    var offers = app.getOffersModel().getOffers();
+    var rankOffersButton = findViewById(R.id.mainRankOffersButton);
+    if ((job != null && offers.size() >= 1) || offers.size() >= 2) {
+      rankOffersButton.setEnabled(true);
+    }
   }
 
   private void addJob() {

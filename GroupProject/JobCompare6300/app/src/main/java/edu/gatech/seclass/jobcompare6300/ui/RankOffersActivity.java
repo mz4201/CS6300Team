@@ -42,7 +42,9 @@ public class RankOffersActivity extends AppCompatActivity {
 
     var currentRow = (TableRow) findViewById(R.id.currentJobRow);
     var job = userModel.getUser().getJob();
-    populate(currentRow, job.getTitle(), job.getCompany());
+    if (job != null) {
+      populate(currentRow, job.getTitle(), job.getCompany());
+    }
 
     this.offersModel = app.getOffersModel();
     this.offers = offersModel.getOffers().stream()
