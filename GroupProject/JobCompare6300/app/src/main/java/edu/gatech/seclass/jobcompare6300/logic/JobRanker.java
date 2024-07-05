@@ -36,12 +36,15 @@ public class JobRanker implements Comparator<Job> {
         LT = Leave Time  (0-100 whole number days inclusive)
         RWT = Telework Days per Week
         */
+        double colAdjSalary = job.getSalary()*100/((double)job.getCol());
+        double colAdjBonus = job.getBonus()*100/((double)job.getCol());
+        double colAdjTraining = job.getTraining()*100/((double)job.getCol()); // not needed for now, but could be useful.
 
         return (
-                (double) (user.getSettings().getSalary() * job.getSalary()) /8 +
-                        (double)(user.getSettings().getBonus() * job.getBonus())/8 +
+                (double) (user.getSettings().getSalary() * colAdjSalary) /8 +
+                        (double)(user.getSettings().getBonus() * colAdjBonus)/8 +
                         (double)(user.getSettings().getTraining() * job.getTraining())/8 +
-                        (double)(user.getSettings().getLeave() * job.getLeave() * job.getSalary()/260)/8 -
-                        (double)(user.getSettings().getTelework() * (260 - 52 * job.getTelework()) * job.getSalary()/260) / 8);
+                        (double)(user.getSettings().getLeave() * job.getLeave() * colAdjSalary/260)/8 -
+                        (double)(user.getSettings().getTelework() * (260 - 52 * job.getTelework()) * colAdjSalary/260) / 8);
     }
 }
