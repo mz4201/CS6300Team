@@ -17,17 +17,22 @@ public class Job implements Parcelable, Serializable {
     private final int leave;
     private final int telework;
 
+    private int clamp(int a, int max) {
+        return (a > max) ? max : (Math.max(a, 0));
+    }
+
+
     public Job(String title, String company, String city, String state, int col, int salary, int bonus, int training, int leave, int telework) {
         this.title = title;
         this.company = company;
         this.city = city;
         this.state = state;
-        this.col = col;
-        this.salary = salary;
-        this.bonus = bonus;
-        this.training = training;
-        this.leave = leave;
-        this.telework = telework;
+        this.col = Math.max(col, 0);
+        this.salary = Math.max(salary, 0);
+        this.bonus = Math.max(bonus,0);
+        this.training = Math.max(training, 0);
+        this.leave = clamp(leave, 365);
+        this.telework = clamp(telework, 7);
     }
 
     // Getters
