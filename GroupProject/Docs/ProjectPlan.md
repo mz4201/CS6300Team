@@ -36,7 +36,7 @@ This project creates a single-user app that help compare job offers based on var
 
 | **Team Member** | **Role** | **Description** |
 |-----------------|----------|-----------------|
-| Tiger Sachse    | TBD      | TBD             |
-| Shashvat Sinha  | TBD      | TBD             |
-| Peixian Wang    | TBD      | TBD             |
-| Mei Zhao        | TBD      | TBD             |
+| Tiger Sachse    | Lead Developer | The key points of the design were from Tiger and we asked him to lead the development, and direct the rest of our work. |
+| Shashvat Sinha  | Developer, data and models, testing | Developed some of the code from the design, tested the code and fixed bugs. |
+| Mei Zhao        | Developer, UX and testing | Completed all the screens and tested control flow. |
+| Peixian Wang    | PM, Developer, Tester | Organized the documents and testing, worked on Model classes and performed testing. |
