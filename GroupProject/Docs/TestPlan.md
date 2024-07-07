@@ -110,17 +110,16 @@ JUnit for unit tests in our Java code, and Selenium for automating UI tests
 
 ### RankOffersActivity
 
-| Test Case ID | Purpose            | Steps                                                        | Expected Result                                              | Actual Result                                      | Pass/Fail | Additional Info |
-| ------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------------------------------- | --------- | --------------- |
-| Test13       | Rank job offers    | 1. Activity is created (onCreate called), 2. Enter multiple job offers | Job offers are ranked correctly based on user settings and job details |                                                    |           |                 |
-| Test14       | Compare job offers | 1.Trigger comparison                                         | Comparison table shows adjusted values and results in CompareOffersActivity |                                                    |           |                 |
-| Test15       | Cancel rank offer  | 1. Enter multiple job offers,2.Cancel                        | No changes are saved, user returns to MainActivity           | No changes are saved, user returns to MainActivity | Pass      |                 |
+| Test Case ID | Purpose            | Steps                                                        | Expected Result                                              | Actual Result                                                | Pass/Fail | Additional Info |
+| ------------ | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------- | --------------- |
+| Test13       | Rank job offers    | 1. Click the Compare Offers(if there are offer exists), job offers ranked from the best to wrost | Job offers are ranked correctly based on user settings and job details | Displays the current job and the current job offers ranked from the best to worst | Pass      |                 |
+| Test14       | Compare job offers | 1.Trigger comparison                                         | Comparison table shows adjusted values and results in CompareOffersActivity | Comparison table displays correct adjusted values for selected jobs | Pass      |                 |
+| Test15       | Cancel rank offer  | 1. Enter multiple job offers,2.Cancel                        | No changes are saved, user returns to MainActivity           | No changes are saved, user returns to MainActivity           | Pass      |                 |
 
 ### CompareOffersActivity
 
-| Test ID | Purpose                  | Steps                                                      | Expected Result                                              | Actual Result                                      | Pass/Fail | Additional Info |
-| ------- | ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- | --------- | --------------- |
-| Test16  | Verify comparison output | 1. Select two job offers to compare, 2. Trigger comparison | Comparison table displays correct adjusted values for selected jobs |                                                    |           |                 |
-| Test17  | Cancel comparison        | 1. Select two job offers to compare, 2. Cancel             | User returns to RankOffersActivity without performing comparison | No changes are saved, user returns to MainActivity | Pass      |                 |
+| Test ID | Purpose                  | Steps                                                      | Expected Result                                              | Actual Result                                                | Pass/Fail | Additional Info |
+| ------- | ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | --------- | --------------- |
+| Test16  | Verify comparison output | 1. Select two job offers to compare, 2. Trigger comparison | Comparison table displays correct adjusted values for selected jobs | Comparison table displays correct adjusted values for selected jobs | Pass      |                 |
+| Test17  | Cancel comparison        | 1. Select two job offers to compare, 2. Cancel             | User returns to RankOffersActivity without performing comparison | No changes are saved, user returns to MainActivity           | Pass      |                 |
 
-### 
