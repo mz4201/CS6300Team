@@ -1,17 +1,17 @@
 package edu.gatech.seclass.jobcompare6300.ui;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 import edu.gatech.seclass.jobcompare6300.R;
 import edu.gatech.seclass.jobcompare6300.bridge.UserModel;
 import edu.gatech.seclass.jobcompare6300.data.Job;
 import edu.gatech.seclass.jobcompare6300.data.User;
-import edu.gatech.seclass.jobcompare6300.data.WeightSettings;
 
 public class AddJobActivity extends AppCompatActivity {
   private EditText jobTitle;
@@ -27,7 +27,6 @@ public class AddJobActivity extends AppCompatActivity {
   private Button addJobSaveButton;
   private Button addJobCancelButton;
 
-
   private UserModel userModel;
 
   @Override
@@ -38,9 +37,7 @@ public class AddJobActivity extends AppCompatActivity {
     setupListeners();
   }
 
-  //setup references
   private void initializeViews() {
-
     var app = (JobCompareApplication) getApplication().getApplicationContext();
     userModel = app.getUserModel();
 
@@ -72,11 +69,131 @@ public class AddJobActivity extends AppCompatActivity {
     }
   }
 
-  //buttons action
   private void setupListeners() {
-    addJobSaveButton.setOnClickListener(view -> save());
-    addJobCancelButton.setOnClickListener(view -> cancel());
+    addJobSaveButton.setOnClickListener(this::handleClick);
+    addJobCancelButton.setOnClickListener(this::handleClick);
   }
+
+  public void handleClick(View view) {
+    if (view.getId() == R.id.addJobSaveButton) {
+      if (areFieldsValid()) {
+        if (isCityStateValid()) {
+          if (isLeaveTimeValid() && isTeleworkDaysValid()) {
+            save();
+          }
+        } else {
+          showToast("City and State should only contain letters.");
+        }
+      } else {
+        showToastForEmptyFields();
+      }
+    } else if (view.getId() == R.id.addJobCancelButton) {
+      cancel();
+    }
+  }
+
+  private boolean areFieldsValid() {
+    return !isEmptyField(jobTitle) &&
+            !isEmptyField(company) &&
+            !isEmptyField(city) &&
+            !isEmptyField(state) &&
+            !isEmptyField(costOfLiving) &&
+            !isEmptyField(yearlySalary) &&
+            !isEmptyField(yearlyBonus) &&
+            !isEmptyField(trainingFund) &&
+            !isEmptyField(leaveTime) &&
+            !isEmptyField(teleworkDays);
+  }
+
+  private boolean isEmptyField(EditText editText) {
+    return editText.getText().toString().trim().isEmpty();
+  }
+
+  private boolean isCityStateValid() {
+    String regex = "^[a-zA-Z]+$";
+    return city.getText().toString().matches(regex) &&
+            state.getText().toString().matches(regex);
+  }
+
+  private boolean isLeaveTimeValid() {
+    String leaveInput = leaveTime.getText().toString().trim();
+    if (leaveInput.isEmpty()) {
+      showToast("Please enter leave time.", leaveTime);
+      return false;
+    }
+    try {
+      int leaveDays = Integer.parseInt(leaveInput);
+      if (leaveDays < 0 || leaveDays > 366) {
+        showToast("Leave time must be between 0 and 366 days.", leaveTime);
+        return false;
+      }
+      return true;
+    } catch (NumberFormatException e) {
+      showToast("Invalid leave time format.", leaveTime);
+      return false;
+    }
+  }
+
+  private boolean isTeleworkDaysValid() {
+    String teleworkInput = teleworkDays.getText().toString().trim();
+    if (teleworkInput.isEmpty()) {
+      showToast("Please enter telework days.", teleworkDays);
+      return false;
+    }
+    try {
+      int teleworkDaysValue = Integer.parseInt(teleworkInput);
+      if (teleworkDaysValue < 0 || teleworkDaysValue > 7) {
+        showToast("Telework days must be between 0 and 7 days.", teleworkDays);
+        return false;
+      }
+      return true;
+    } catch (NumberFormatException e) {
+      showToast("Invalid telework days format.", teleworkDays);
+      return false;
+    }
+  }
+
+  private void showToast(String message) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+  }
+
+  private void showToast(String message, EditText field) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+  }
+
+  private void showToastForEmptyFields() {
+    if (isEmptyField(jobTitle)) {
+      showToast("Please enter job title.");
+    }
+    if (isEmptyField(company)) {
+      showToast("Please enter company.");
+    }
+    if (isEmptyField(city)) {
+      showToast("Please enter city.");
+    }
+    if (isEmptyField(state)) {
+      showToast("Please enter state.");
+    }
+    if (isEmptyField(costOfLiving)) {
+      showToast("Please enter cost of living.");
+    }
+    if (isEmptyField(yearlySalary)) {
+      showToast("Please enter yearly salary.");
+    }
+    if (isEmptyField(yearlyBonus)) {
+      showToast("Please enter yearly bonus.");
+    }
+    if (isEmptyField(trainingFund)) {
+      showToast("Please enter training fund.");
+    }
+    if (isEmptyField(leaveTime)) {
+      showToast("Please enter leave time.");
+    }
+    if (isEmptyField(teleworkDays)) {
+      showToast("Please enter telework days.");
+    }
+  }
+
 
   private void save() {
     Job job = new Job(

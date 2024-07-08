@@ -26,7 +26,7 @@
   <string name="yearly_salary">Yearly Salary</string>
   <string name="yearly_bonus">Yearly Bonus</string>
   <string name="training_development_fund">Training/Development Fund</string>
-  <string name="leave_time">Leave Time</string>
+  <string name="leave_time">Leave Time Per Year</string>
   <string name="telework_days_per_week">Telework Days Per Week</string>
   <string name="save">Save</string>
   <string name="job_offer_detail">Job Offer Detail</string>
