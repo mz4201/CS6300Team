@@ -29,274 +29,331 @@
         android:background="#6750A3"
         android:textColor="@color/white" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingHorizontal="15dp">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="15dp">
 
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="@string/title"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="@string/company"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftCompany"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightCompany"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="@string/location"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftLocation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightLocation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck"
+                android:paddingEnd="10dp"/>
+            <TextView
+                android:id="@+id/compareOffersLeftTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/company"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck"
+                android:paddingEnd="10dp"/>
+            <TextView
+                android:id="@+id/compareOffersLeftCompany"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightCompany"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/location"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck"
+                android:paddingEnd="10dp"/>
+            <TextView
+                android:id="@+id/compareOffersLeftLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
 
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="Yearly salary adjusted for cost of living"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftSalary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightSalary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="Yearly bonus adjusted for cost of living"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftBonus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightBonus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="Training and Development Fund"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftTraining"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightTraining"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="Leave Time"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftLeave"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightLeave"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-      <TableRow
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="8dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="Telework Days per Week "
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersLeftTelework"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-        <TextView
-            android:id="@+id/compareOffersRightTelework"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="placeholder"
-            android:textSize="18sp"
-            tools:ignore="TextContrastCheck" />
-      </TableRow>
-    </TableLayout>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Yearly salary"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                  tools:ignore="TextContrastCheck" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="adjusted for cost of living"
+                  android:textSize="14sp"
+                  android:textColor="#808080"
+                  tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/compareOffersLeftSalary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightSalary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Yearly bonus"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                  tools:ignore="TextContrastCheck" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="adjusted for cost of living"
+                  android:textSize="14sp"
+                  android:textColor="#808080"
+                  tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/compareOffersLeftBonus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightBonus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Training and Development Fund"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck"
+                android:paddingEnd="10dp"/>
+            <TextView
+                android:id="@+id/compareOffersLeftTraining"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightTraining"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Leave Time"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                  tools:ignore="TextContrastCheck" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="days per year"
+                  android:textSize="14sp"
+                  android:textColor="#808080"
+                  tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/compareOffersLeftLeave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightLeave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Telework Days"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                  tools:ignore="TextContrastCheck" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="per week"
+                  android:textSize="14sp"
+                  android:textColor="#808080"
+                  tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/compareOffersLeftTelework"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+            <TextView
+                android:id="@+id/compareOffersRightTelework"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="placeholder"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+          </TableRow>
+        </TableLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="202dp"
+        android:layout_height="230dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -317,7 +374,7 @@
           android:textSize="18sp" />
     </LinearLayout>
 
-  </LinearLayout>
+    </LinearLayout>
 
 
 
